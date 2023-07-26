@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap");
+
+footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10vmax;
+  padding: 2vmax;
+  background-color: rgb(34, 33, 33);
+  color: white;
+  min-height: 50vh;
+}
+
+.leftFooter {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter > h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 35px;
+}
+.leftFooter > p {
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 25px;
+}
+.leftFooter > img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid grey;
+  transition: all 0.5s;
+}
+.leftFooter > img:hover {
+  width: 15vmax;
+  border: 2px solid crimson;
+}
+.midFooter {
+  width: 50%;
+  text-align: center;
+}
+.midFooter > h1 {
+  font-size: 4vmax;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+  color: #eb4034;
+}
+.midFooter > p {
+  max-width: 50%;
+  margin: 1vmax auto;
+  font-size: 25px;
+}
+
+.rightFooter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightFooter > h4 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+.footer-icon {
+  margin: 10px;
+  color: rgb(233, 229, 222);
+  font-size: 3.5em;
+  transition: ease-out .1s;
+}
+
+.footer-icon:hover {
+  font-size: 3.9em;
+
+  color: #eb4034;
+}
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    width: 100%;
+  }
+  .leftFooter {
+    width: 100%;
+    margin: 50px;
+  }
+  .leftFooter > img {
+    width: 15vmax;
+  }
+  .midFooter {
+    width: 100%;
+  }
+  .rightFooter {
+    width: 100%;
+    margin: 50px;
+  }
+
+  
+}

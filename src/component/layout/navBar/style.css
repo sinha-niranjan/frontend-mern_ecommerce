@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&display=swap");
+
+.my-nav {
+  max-height: 13vh;
+}
+div.navBar.container {
+  max-width: 90%;
+}
+
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: ease-in 0.1s;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #f3f7f5;
+}
+
+.logo {
+  min-width: 150px;
+  width: 20%;
+}
+
+.navbar-link.active {
+  color: #eb4034;
+  opacity: 0.75;
+}
+
+.link {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 1px;
+  padding: 0 15px;
+  margin: 0 30px;
+  font-size: 24px;
+  opacity: 0.75;
+  text-decoration: none;
+  margin-right: auto;
+  transition: ease-in 0.3s;
+}
+
+.link:hover {
+  font-size: 35px;
+  opacity: 1;
+}
+
+.icon {
+  display: flex;
+}
+
+.profile-icon {
+  scale: 80%;
+  padding: 0 15px;
+  margin-right: auto;
+  transition: ease-in 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .my-nav {
+    max-height: 50vh;
+  }
+  .icon {
+    display: flex;
+  }
+  /* .link {
+    margin: 2.5px;
+  } */
+  nav.navbar {
+    background-color: #f3f7f5;
+  }
+}

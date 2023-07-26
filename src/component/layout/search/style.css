@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+
+.searchBox {
+  background-color: rgb(231, 231, 231);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-family: 'Rubik', sans-serif;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 500px;
+  transition: all 0.5s;
+}
+
+.searchBar:hover{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 35px 45px, rgba(0, 0, 0, 0.05) 0px 25px 30px;
+}
+
+.searchBar > input {
+  background-color: transparent;
+
+  outline: none;
+
+  width: 50vw;
+  font-size: 30px;
+  padding-left: 2vw;
+  margin: 1vw;
+}
+
+.search-icon {
+  margin-right: 10px;
+  color: black;
+  font-size: 3.5vw;
+}
+
+
+@media (max-width: 650px) {
+    .searchBar > input {
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .search-icon{
+        font-size: 5vw;
+    }
+}

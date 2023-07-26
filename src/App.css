@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  cursor: url("./assets/img/cursor.png"),auto;
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.greenColor {
+  color: green;
+}
+
+.redColor {
+  color: red;
+}
+
+.yellowColor {
+  color: rgb(255, 145, 0);
+}
