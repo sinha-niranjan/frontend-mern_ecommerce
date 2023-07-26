@@ -39,10 +39,10 @@ export const getProduct =
         type: ALL_PRODUCT_REQUEST,
       });
 
-      let link = `https://backend-mern_ecommerce.vercel.app/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
+      let link = `https://backend-mern-ecommerce.vercel.app/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
 
       if (category) {
-        link = `https://backend-mern_ecommerce.vercel.app/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
+        link = `https://backend-mern-ecommerce.vercel.app/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`;
       }
       const { data } = await axios.get(link, { withCredentials: true });
 
@@ -63,7 +63,7 @@ export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
 
-    const { data } = await axios.get("https://backend-mern_ecommerce.vercel.app/api/v1/admin/products", { withCredentials: true });
+    const { data } = await axios.get("https://backend-mern-ecommerce.vercel.app/api/v1/admin/products", { withCredentials: true });
 
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,
@@ -83,7 +83,7 @@ export const getProductDetails = (id) => async (dispatch) => {
       type: PRODUCT_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`https://backend-mern_ecommerce.vercel.app/api/v1/product/${id}`, { withCredentials: true });
+    const { data } = await axios.get(`https://backend-mern-ecommerce.vercel.app/api/v1/product/${id}`, { withCredentials: true });
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -108,7 +108,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: { "Cotent-Type": "application/json" }, withCredentials: true 
     };
 
-    const { data } = await axios.put(`https://backend-mern_ecommerce.vercel.app/api/v1/review`, reviewData, config);
+    const { data } = await axios.put(`https://backend-mern-ecommerce.vercel.app/api/v1/review`, reviewData, config);
 
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -134,7 +134,7 @@ export const createProduct = (productData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://backend-mern_ecommerce.vercel.app/api/v1/admin/product/new`,
+      `https://backend-mern-ecommerce.vercel.app/api/v1/admin/product/new`,
       productData,
       config
     );
@@ -163,7 +163,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     };
 
     const { data } = await axios.put(
-      `https://backend-mern_ecommerce.vercel.app/api/v1/admin/product/${id}`,
+      `https://backend-mern-ecommerce.vercel.app/api/v1/admin/product/${id}`,
       productData,
       config
     );
@@ -187,7 +187,7 @@ export const deleteProduct = (id) => async (dispatch) => {
       type: DELETE_PRODUCT_REQUEST,
     });
 
-    const { data } = await axios.delete(`https://backend-mern_ecommerce.vercel.app/api/v1/admin/product/${id}`, { withCredentials: true });
+    const { data } = await axios.delete(`https://backend-mern-ecommerce.vercel.app/api/v1/admin/product/${id}`, { withCredentials: true });
 
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -213,7 +213,7 @@ export const getProductReviews = (id) => async (dispatch) => {
       type: ALL_REVIEW_REQUEST,
     });
 
-    const { data } = await axios.get(`https://backend-mern_ecommerce.vercel.app/api/v1/reviews?id=${id}`, { withCredentials: true });
+    const { data } = await axios.get(`https://backend-mern-ecommerce.vercel.app/api/v1/reviews?id=${id}`, { withCredentials: true });
 
     dispatch({
       type: ALL_REVIEW_SUCCESS,
@@ -235,7 +235,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     });
 
     const { data } = await axios.delete(
-      `https://backend-mern_ecommerce.vercel.app/api/v1/reviews?id=${reviewId}&productId=${productId}`, { withCredentials: true }
+      `https://backend-mern-ecommerce.vercel.app/api/v1/reviews?id=${reviewId}&productId=${productId}`, { withCredentials: true }
     );
 
     dispatch({

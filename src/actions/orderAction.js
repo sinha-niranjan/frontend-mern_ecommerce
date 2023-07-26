@@ -33,7 +33,7 @@ import {
         },
       };
   
-      const data = await axios.post("https://backend-mern_ecommerce.vercel.app/api/v1/order/new", order, config);
+      const data = await axios.post("https://backend-mern-ecommerce.vercel.app/api/v1/order/new", order, config);
   
       dispatch({
         type: CREATE_ORDER_SUCCESS,
@@ -58,7 +58,7 @@ import {
         },
       };
   
-      const data = await axios.put(`https://backend-mern_ecommerce.vercel.app/api/v1/admin/order/${id}`, order, config);
+      const data = await axios.put(`https://backend-mern-ecommerce.vercel.app/api/v1/admin/order/${id}`, order, config);
   
       dispatch({
         type: UPDATE_ORDER_SUCCESS,
@@ -77,7 +77,7 @@ import {
     try {
       dispatch({ type: DELETE_ORDER_REQUEST });
   
-      const data = await axios.delete(`https://backend-mern_ecommerce.vercel.app/api/v1/admin/order/${id}`, { withCredentials: true });
+      const data = await axios.delete(`https://backend-mern-ecommerce.vercel.app/api/v1/admin/order/${id}`, { withCredentials: true });
   
       console.log(data)
       dispatch({
@@ -97,7 +97,7 @@ import {
     try {
       dispatch({ type: MY_ORDERS_REQUEST });
   
-      const data = await axios.get("https://backend-mern_ecommerce.vercel.app/api/v1/orders/me", { withCredentials: true });
+      const data = await axios.get("https://backend-mern-ecommerce.vercel.app/api/v1/orders/me", { withCredentials: true });
   
       dispatch({
         type: MY_ORDERS_SUCCESS,
@@ -116,7 +116,7 @@ import {
     try {
       dispatch({ type: ALL_ORDERS_REQUEST });
   
-      const data = await axios.get("https://backend-mern_ecommerce.vercel.app/api/v1/admin/orders", { withCredentials: true });
+      const data = await axios.get("https://backend-mern-ecommerce.vercel.app/api/v1/admin/orders", { withCredentials: true });
   
       dispatch({
         type: ALL_ORDERS_SUCCESS,
@@ -135,7 +135,7 @@ import {
     try {
       dispatch({ type: ORDER_DETAILS_REQUEST });
   
-      const data = await axios.get(`https://backend-mern_ecommerce.vercel.app/api/v1/order/${id}`, { withCredentials: true });
+      const data = await axios.get(`https://backend-mern-ecommerce.vercel.app/api/v1/order/${id}`, { withCredentials: true });
   
       dispatch({
         type: ORDER_DETAILS_SUCCESS,

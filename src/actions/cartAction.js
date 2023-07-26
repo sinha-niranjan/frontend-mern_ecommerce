@@ -8,7 +8,7 @@ import {
   // Add to Cart
   export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
     try {
-      const { data } = await axios.get(`https://backend-mern_ecommerce.vercel.app/api/v1/product/${id}`, { withCredentials: true });
+      const { data } = await axios.get(`https://backend-mern-ecommerce.vercel.app/api/v1/product/${id}`, { withCredentials: true });
   
       dispatch({
         type: ADD_TO_CART,
