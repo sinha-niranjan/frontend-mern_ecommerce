@@ -28,7 +28,7 @@ const About = () => {
           </Button>
           <span>
             This is a sample wesbite made by @sinha_niranjan. Only with the
-            purpose to teach MERN Stack on the channel 6 Pack Programmer
+            purpose to create a Project of ecommerce app in MERN Stack.
           </span>
         </div>
         <div className="aboutSectionContainer2">
