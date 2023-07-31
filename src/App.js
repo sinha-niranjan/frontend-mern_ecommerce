@@ -54,7 +54,8 @@ function App() {
 
   async function getStripeApiKey() {
     const { data } = await axios.get(
-      "https://frontend-mern-ecommerce.vercel.app/api/v1/stripeapikey"
+      "https://backend-mern-ecommerce.vercel.app/api/v1/stripeapikey",
+      { withCredentials: true }
     );
 
     setStripeApiKey(data.stripeApiKey);
