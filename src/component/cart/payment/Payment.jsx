@@ -20,7 +20,6 @@ import EventIcon from "@mui/icons-material/Event";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { clearErrors, createOrder } from "../../../actions/orderAction";
 
-
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
 
@@ -57,12 +56,11 @@ const Payment = () => {
 
     try {
       const config = {
-        headers: {
-          "content-Type": "application/json",
-        },
+        headers: { "Cotent-Type": "application/json" }, withCredentials: true 
       };
+
       const { data } = await axios.post(
-        "/api/v1/payment/process",
+        "https://backend-mern-ecommerce.vercel.app/api/v1/payment/process",
         paymentData,
         config
       );
@@ -98,7 +96,7 @@ const Payment = () => {
             status: result.paymentIntent.status,
           };
 
-          dispatch(createOrder(order))
+          dispatch(createOrder(order));
           navigate("/success");
         } else {
           alert.error("There's some issue while processing payment.");
