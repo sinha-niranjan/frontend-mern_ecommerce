@@ -53,7 +53,9 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("");
 
   async function getStripeApiKey() {
-    const { data } = await axios.get("https://frontend-mern-ecommerce.vercel.app/api/v1/stripeapikey");
+    const { data } = await axios.get(
+      "https://frontend-mern-ecommerce.vercel.app/api/v1/stripeapikey"
+    );
 
     setStripeApiKey(data.stripeApiKey);
   }
@@ -71,7 +73,6 @@ function App() {
 
   // window.addEventListener("contextmenu", (e) => e.preventDefault());
 
- 
   return (
     <Router>
       <NavBar />
@@ -167,13 +168,9 @@ function App() {
               ) : (
                 <>
                   {isAuthenticated ? (
-                    <>
-                    <Products />
                     <Elements stripe={loadStripe(stripeApiKey)}>
                       <Payment />{" "}
                     </Elements>
-                    </>
-                    
                   ) : (
                     <LoginSignUp />
                   )}
@@ -241,7 +238,7 @@ function App() {
               <Loader />
             ) : (
               <>
-                {isAuthenticated && user &&  user.role === "admin" ? (
+                {isAuthenticated && user && user.role === "admin" ? (
                   <Dashboard />
                 ) : (
                   <LoginSignUp />
@@ -259,7 +256,7 @@ function App() {
               <Loader />
             ) : (
               <>
-                {isAuthenticated &&user &&  user.role === "admin" ? (
+                {isAuthenticated && user && user.role === "admin" ? (
                   <ProductList />
                 ) : (
                   <LoginSignUp />
@@ -277,7 +274,7 @@ function App() {
               <Loader />
             ) : (
               <>
-                {isAuthenticated &&user && user.role === "admin" ? (
+                {isAuthenticated && user && user.role === "admin" ? (
                   <CreateProduct />
                 ) : (
                   <LoginSignUp />
