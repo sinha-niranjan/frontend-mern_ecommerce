@@ -167,9 +167,13 @@ function App() {
               ) : (
                 <>
                   {isAuthenticated ? (
+                    <>
+                    <Products />
                     <Elements stripe={loadStripe(stripeApiKey)}>
                       <Payment />{" "}
                     </Elements>
+                    </>
+                    
                   ) : (
                     <LoginSignUp />
                   )}
